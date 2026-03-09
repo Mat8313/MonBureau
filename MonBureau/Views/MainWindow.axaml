@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mi="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+        x:Class="MonBureau.Views.MainWindow"
+        Title="Mon Bureau" Width="1000" Height="650"
+        Background="Transparent"
+        TransparencyLevelHint="AcrylicBlur"
+        WindowState="Maximized"
+        ExtendClientAreaToDecorationsHint="True">
+
+    <Panel>
+
+        <Panel>
+            <Panel.Background>
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                    <GradientStop Color="#0f0c29" Offset="0"/>
+                    <GradientStop Color="#302b63" Offset="0.5"/>
+                    <GradientStop Color="#24243e" Offset="1"/>
+                </LinearGradientBrush>
+            </Panel.Background>
+        </Panel>
+
+        <WrapPanel HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Orientation="Horizontal">
+
+            <Button Click="OpenBrowser" Classes="desktop-icon">
+                <StackPanel>
+                    <Border Classes="icon-circle" Background="#3A86FF">
+                        <mi:MaterialIcon Kind="Web" Width="36" Height="36" Foreground="White"/>
+                    </Border>
+                    <TextBlock Text="Navigateur" Classes="icon-label"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="OpenVideo" Classes="desktop-icon">
+                <StackPanel>
+                    <Border Classes="icon-circle" Background="#FF006E">
+                        <mi:MaterialIcon Kind="PlayCircle" Width="36" Height="36" Foreground="White"/>
+                    </Border>
+                    <TextBlock Text="Vidéo" Classes="icon-label"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="OpenImage" Classes="desktop-icon">
+                <StackPanel>
+                    <Border Classes="icon-circle" Background="#8338EC">
+                        <mi:MaterialIcon Kind="Image" Width="36" Height="36" Foreground="White"/>
+                    </Border>
+                    <TextBlock Text="Image" Classes="icon-label"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="OpenSite" Classes="desktop-icon">
+                <StackPanel>
+                    <Border Classes="icon-circle" Background="#FB5607">
+                        <mi:MaterialIcon Kind="Earth" Width="36" Height="36" Foreground="White"/>
+                    </Border>
+                    <TextBlock Text="Site Web" Classes="icon-label"/>
+                </StackPanel>
+            </Button>
+
+        </WrapPanel>
+
+        <Border VerticalAlignment="Bottom"
+                Background="#22FFFFFF"
+                Height="48">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Grid.Column="0"
+                           Text="🖥️  Mon Bureau"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           Margin="16,0"/>
+                <TextBlock Grid.Column="1"
+                           Name="ClockText"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           Margin="0,0,16,0"/>
+            </Grid>
+        </Border>
+
+    </Panel>
+</Window>

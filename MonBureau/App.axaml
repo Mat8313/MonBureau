@@ -1,0 +1,36 @@
+<Application xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:materialIcons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+			 x:Class="MonBureau.App"
+			 RequestedThemeVariant="Default">
+	<Application.Styles>
+		<FluentTheme />
+		<materialIcons:MaterialIconStyles />
+		<Style Selector="Button.desktop-icon">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="Margin" Value="24"/>
+			<Setter Property="Cursor" Value="Hand"/>
+		</Style>
+		<Style Selector="Button.desktop-icon:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="RenderTransform" Value="scale(1.1)"/>
+		</Style>
+		<Style Selector="Border.icon-circle">
+			<Setter Property="Width" Value="72"/>
+			<Setter Property="Height" Value="72"/>
+			<Setter Property="CornerRadius" Value="20"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="BoxShadow" Value="0 4 20 0 #44000000"/>
+		</Style>
+		<Style Selector="TextBlock.icon-label">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="0,8,0,0"/>
+			<Setter Property="FontSize" Value="13"/>
+			<Setter Property="FontWeight" Value="SemiBold"/>
+		</Style>
+
+	</Application.Styles>
+</Application>
